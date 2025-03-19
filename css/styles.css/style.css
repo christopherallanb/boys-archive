@@ -1,0 +1,81 @@
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Estilos da barra de navegação */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:focus,
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilos do conteúdo principal */
+main {
+    padding: 20px;
+    margin-bottom: 60px; /* Para evitar que o conteúdo seja coberto pelo rodapé fixo */
+}
+
+/* Estilos das seções */
+section {
+    margin-bottom: 40px;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000; /* Certifica-se de que o rodapé fica acima de outros elementos */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

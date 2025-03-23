@@ -247,6 +247,23 @@ body {
   transform: translateY(0);
 }
 
+/* Estilos específicos para a página de atividades */
+.atividades {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
 /* Estilos para mobile */
 @media (max-width: 768px) {
   .navbar .nav-links {
@@ -266,7 +283,7 @@ body {
   }
 
   .menu-icon {
-    display: block;
+    display: block !important;
     font-size: 1.5rem;
     cursor: pointer;
   }
@@ -293,21 +310,9 @@ body {
   }
 }
 
-/* Estilos específicos para a página de atividades */
-.atividades {
-  padding: 5rem 0;
-  text-align: center;
+/* Oculta o ícone de menu por padrão */
+.menu-icon {
+  display: none !important;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  color: #6b7280;
-  margin-bottom: 2rem;
-}
-
-/* Removing duplicate definitions for .grid, .glass-card, .card-title, and .card-text */

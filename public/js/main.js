@@ -15,7 +15,6 @@ scrollTopBtn.addEventListener('click', () => {
   });
 });
 
-// Script para o menu mobile
 const menuIcon = document.getElementById("menuIcon");
 const navLinks = document.getElementById("navLinks");
 

@@ -316,3 +316,26 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/* Exibe o ícone de menu apenas em telas menores */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block !important;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+}

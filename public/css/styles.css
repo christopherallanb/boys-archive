@@ -75,12 +75,16 @@ body {
 }
 
 .btn-primary {
-  background-color: #ffffff;
-  color: #3b82f6;
-  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
   border-radius: 9999px;
   border: none;
   cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
 }
 
 .btn-outline {
@@ -139,6 +143,17 @@ body {
 
 .card-text {
   color: #6b7280;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-deadline {
+  color: #6b7280;
+  font-size: 0.875rem;
 }
 
 /* Testimonials */
@@ -278,32 +293,21 @@ body {
   }
 }
 
-/* Oculta o ícone de menu por padrão */
-.menu-icon {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
+/* Estilos específicos para a página de atividades */
+.atividades {
+  padding: 5rem 0;
+  text-align: center;
 }
 
-/* Exibe o ícone de menu apenas em telas menores */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .navbar .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #ffffff;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .navbar .nav-links.active {
-    display: flex;
-  }
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
+
+.section-subtitle {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+/* Removing duplicate definitions for .grid, .glass-card, .card-title, and .card-text */

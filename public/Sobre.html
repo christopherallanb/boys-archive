@@ -1,40 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nós</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Certifique-se de que o caminho do arquivo CSS está correto -->
-    <link rel="stylesheet" href="atividades.css"> <!-- Certifique-se de que o caminho do arquivo CSS está correto -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre nós</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css\styles.css">
 </head>
 <body>
-
-<!-- NavBar -->
-<nav class="navbar">
-    <div class="container">
-      <div class="logo">
-        <img src="img\cachorros-caxumba\Cachorro-caxumba-1.jpeg" alt="Logo cachorro caxumba" height="90">
-
-      </div>
-      <div class="nav-links">
-        <a href="Main.html" class="nav-link">Início</a> <!-- Caminho corrigido -->
-        <a href="Atividades.html" class="nav-link">Atividades</a>
-        <a href="#" class="nav-link">Contato</a>
-      </div>
-    </div>
-  </nav>
-    
-    <main>
-        <section class="content">
-            <h2>Bem-vindo à nossa página!</h2>
-            <p>Aqui você pode adicionar o conteúdo principal da página.</p>
-        </section>
-    </main>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Nome do Site. Todos os direitos reservados.</p>
+  <div class="min-h-screen">
+    <!-- NavBar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <img src="img/cachorros-caxumba/Cachorro-caxumba-1.jpeg" alt="Logo cachorro caxumba" height="90">
         </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Início</a> <!-- Caminho corrigido -->
+          <a href="Atividades.html" class="nav-link">Atividades</a>
+          <a href="#" class="nav-link">Contato</a>
+          <a href="Sobre.html" class="nav-link active">Sobre</a> <!-- Botão de Sobre --> 
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sobre Nós Section -->
+    <section class="hero">
+      <div class="container text-center">
+        <h1 class="hero-title">Sobre Nós</h1>
+        <p class="hero-subtitle">Conheça mais sobre nossa plataforma e nossa equipe.</p>
+      </div>
+    </section>
+    
+    <!-- Conteúdo sobre a plataforma -->
+    <section class="about-content">
+      <div class="container">
+        <div class="about-section">
+          <h2>Nossa Plataforma</h2>
+          <p>A Minha Plataforma oferece uma série de atividades online para ajudar no aprendizado de inglês de forma divertida e eficaz. Nosso objetivo é proporcionar aos usuários uma experiência de aprendizado personalizada e interativa, adaptada às suas necessidades e interesses.</p>
+        </div>
+        
+        <div class="about-section">
+          <h2>Nossa Equipe</h2>
+          <p>Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Nulla sapien lorem, 
+            laoreet vel tellus quis, scelerisque blandit lacus. Etiam laoreet et mauris ut viverra. 
+            Sed pellentesque consectetur nunc, at eleifend urna eleifend ut. 
+            Vivamus pulvinar nisi vitae quam volutpat gravida.
+             Praesent sed nisl elementum, molestie libero et,
+              congue erat. Cras a libero risus. Proin a sagittis purus,
+              sed id tempus nibh.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <p class="footer-text">© 2023 Minha Plataforma. Alguns os direitos reservados.</p>
+      </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">↑</button>
+  </div>
+
+  <script src="js/Sobre.js"></script> <!-- Caminho corrigido -->
 </body>
 </html>

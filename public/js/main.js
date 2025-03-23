@@ -14,3 +14,11 @@ scrollTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+// Script para o menu mobile
+const menuIcon = document.getElementById("menuIcon");
+const navLinks = document.getElementById("navLinks");
+
+menuIcon.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});

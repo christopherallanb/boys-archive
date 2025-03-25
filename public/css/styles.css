@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #f9fafb;
   color: #1f2937;
+  transition: .5s;
 }
 
 .container {
@@ -22,6 +23,10 @@ body {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  z-index: 10;
 }
 
 .navbar .container {
@@ -50,10 +55,54 @@ body {
   color: #3b82f6;
 }
 
+.trilho{
+  width: 4rem;
+  height: 2rem;
+  background-color: rgb(183, 182, 182);
+  border-radius: 150px;
+  position: relative;
+  cursor: pointer;
+
+}
+.trilho .indicador{
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transform: scale(.8);
+  position: absolute;
+  left: 0;
+  transition: .5s;
+}
+
+.trilho.modoescuro {
+  background-color: rgb(99, 99, 99);
+}
+body.modoescuro{
+background-color: #1b1e23;
+}
+.navbar.modoescuro  {
+  background-color: #1b1e23;
+  color: white;
+}
+.hero.modoescuro {
+  background: linear-gradient(to bottom, #1E2A38, #0D1117);
+}
+
+.trilho.modoescuro .indicador{
+  position: absolute;
+  left: 33px;
+  background-color: black;
+
+  
+
+}
+
+
 /* Hero Section */
 .hero {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  background: linear-gradient(135deg, #72a8ff, #2563eb);
   color: #ffffff;
 }
 

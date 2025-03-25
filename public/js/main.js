@@ -34,4 +34,23 @@ trilho.addEventListener("click", ()=>{
     body.classList.toggle("modoescuro")
     navbar.classList.toggle("modoescuro")
     hero.classList.toggle("modoescuro")
-})
+
+     // verifica se o modo escuro está ativo ou não
+
+    if (body.classList.contains("modoescuro")) {
+      localStorage.setItem("modoescuro", "ativo");
+    } else {
+      localStorage.setItem("modoescuro", "inativo");
+    }
+});
+
+ // verifica se o modo escuro estava ativado
+window.addEventListener("load", () => {
+  if (localStorage.getItem("modoescuro") === "ativo") {
+      trilho.classList.add("modoescuro");
+      body.classList.add("modoescuro");
+      navbar.classList.add("modoescuro");
+      hero.classList.add("modoescuro");
+  }
+});
+ 

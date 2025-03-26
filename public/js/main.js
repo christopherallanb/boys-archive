@@ -77,7 +77,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Fechar o dropdown quando um item for selecionado (opcional)
+// Fechar o dropdown quando um item for selecionado
 document.querySelectorAll('.dropdown-item').forEach(item => {
   item.addEventListener('click', () => {
     dropdownMenu.classList.remove('show');

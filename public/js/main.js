@@ -13,9 +13,6 @@ scrollTopBtn.addEventListener('click', () => {
     top: 0,
     behavior: 'smooth'
   });
-<<<<<<< HEAD
-});
-=======
 });
 
 const menuIcon = document.getElementById("menuIcon");
@@ -57,4 +54,3 @@ window.addEventListener("load", () => {
   }
 });
  
->>>>>>> f0e001f1d53bc643436145fafa52cf5dc1804add

@@ -5,10 +5,7 @@ body {
   padding: 0;
   background-color: #f9fafb;
   color: #1f2937;
-<<<<<<< HEAD
-=======
   transition: .5s;
->>>>>>> f0e001f1d53bc643436145fafa52cf5dc1804add
 }
 
 .container {
@@ -26,13 +23,10 @@ body {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
-<<<<<<< HEAD
-=======
   position: fixed;
   align-items: center;
   width: 100%;
   z-index: 10;
->>>>>>> f0e001f1d53bc643436145fafa52cf5dc1804add
 }
 
 .navbar .container {
@@ -61,12 +55,6 @@ body {
   color: #3b82f6;
 }
 
-<<<<<<< HEAD
-/* Hero Section */
-.hero {
-  padding: 5rem 0;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-=======
 .trilho{
   width: 4rem;
   height: 2rem;
@@ -115,7 +103,6 @@ background-color: #1b1e23;
 .hero {
   padding: 5rem 0;
   background: linear-gradient(135deg, #72a8ff, #2563eb);
->>>>>>> f0e001f1d53bc643436145fafa52cf5dc1804add
   color: #ffffff;
 }
 
@@ -137,27 +124,18 @@ background-color: #1b1e23;
 }
 
 .btn-primary {
-<<<<<<< HEAD
-  background-color: #ffffff;
-  color: #3b82f6;
-  padding: 0.75rem 1.5rem;
-=======
   background-color: #3b82f6;
   color: #ffffff;
   padding: 0.5rem 1rem;
->>>>>>> f0e001f1d53bc643436145fafa52cf5dc1804add
   border-radius: 9999px;
   border: none;
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-=======
 .btn-primary:hover {
   background-color: #2563eb;
 }
 
->>>>>>> f0e001f1d53bc643436145fafa52cf5dc1804add
 .btn-outline {
   background-color: transparent;
   border: 1px solid #ffffff;
@@ -216,8 +194,6 @@ background-color: #1b1e23;
   color: #6b7280;
 }
 
-<<<<<<< HEAD
-=======
 .card-footer {
   display: flex;
   justify-content: space-between;
@@ -229,7 +205,6 @@ background-color: #1b1e23;
   font-size: 0.875rem;
 }
 
->>>>>>> f0e001f1d53bc643436145fafa52cf5dc1804add
 /* Testimonials */
 .testimonials {
   padding: 5rem 0;
@@ -319,9 +294,6 @@ background-color: #1b1e23;
 .scroll-top-btn.visible {
   opacity: 1;
   transform: translateY(0);
-<<<<<<< HEAD
-}
-=======
 }
 
 /* Estilos específicos para a página de atividades */
@@ -416,4 +388,3 @@ background-color: #1b1e23;
     display: flex;
   }
 }
->>>>>>> f0e001f1d53bc643436145fafa52cf5dc1804add

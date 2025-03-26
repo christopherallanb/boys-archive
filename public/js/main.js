@@ -54,3 +54,34 @@ window.addEventListener("load", () => {
   }
 });
  
+// Dropdown do perfil
+const profileButton = document.getElementById('profileButton');
+const dropdownMenu = document.getElementById('dropdownMenu');
+
+// Alternar o menu dropdown
+profileButton.addEventListener('click', (e) => {
+  e.stopPropagation();
+  dropdownMenu.classList.toggle('show');
+  
+  // Rotacionar a seta
+  const arrow = profileButton.querySelector('.dropdown-arrow');
+  arrow.style.transform = dropdownMenu.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
+});
+
+// Fechar o dropdown quando clicar fora
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.profile-dropdown')) {
+    dropdownMenu.classList.remove('show');
+    const arrow = profileButton.querySelector('.dropdown-arrow');
+    arrow.style.transform = 'rotate(0)';
+  }
+});
+
+// Fechar o dropdown quando um item for selecionado (opcional)
+document.querySelectorAll('.dropdown-item').forEach(item => {
+  item.addEventListener('click', () => {
+    dropdownMenu.classList.remove('show');
+    const arrow = profileButton.querySelector('.dropdown-arrow');
+    arrow.style.transform = 'rotate(0)';
+  });
+});

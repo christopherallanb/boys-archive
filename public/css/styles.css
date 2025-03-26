@@ -238,7 +238,7 @@ body.modoescuro .dropdown-item::after {
 /* Hero Section */
 .hero {
   padding: 7rem 0 5rem;
-  background: linear-gradient(135deg, #72a8ff, #2563eb);
+  background: url('../img/banner/10.jpg') no-repeat center center/cover;
   color: #ffffff;
   transition: background 0.5s;
 }
@@ -246,6 +246,7 @@ body.modoescuro .dropdown-item::after {
 .hero.modoescuro {
   background: linear-gradient(to bottom, #1E2A38, #0D1117);
 }
+
 
 .hero-title {
   font-size: 2.5rem;
@@ -596,5 +597,192 @@ body.modoescuro .scroll-top-btn:hover {
 @media (max-width: 768px) {
   .menu-icon {
     display: block !important;
+  }
+}
+/* ==================== */
+/* SEÇÃO DE DEPOIMENTOS */
+/* ==================== */
+
+.testimonials {
+  padding: 5rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('../img/banner/01.jpg') center/cover no-repeat;
+  color: white;
+  position: relative;
+}
+
+body.modoescuro .testimonials {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+              url('../img/banner/01.jpg') center/cover no-repeat;
+}
+
+.testimonials .container {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0; /* Changed z-index to 0 to ensure it is behind the content */
+}
+
+.testimonials .container {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.modoescuro .testimonial-card {
+  background: rgba(30, 30, 30, 0.4);
+}
+
+.testimonials .quote {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.testimonials .testimonial-text {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.testimonials .author-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.testimonials .author-name {
+  color: white;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.testimonials .author-info {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 3rem 0;
+    background-attachment: scroll;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+}
+
+/* ============================ */
+/* SEÇÃO CONTEÚDO EM DESTAQUE */
+/* ============================ */
+
+.featured-content {
+  padding: 5rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('../img/banner/02.jpg') center/cover no-repeat;
+  color: white;
+  position: relative;
+}
+
+body.modoescuro .featured-content {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+              url('../img/banner/02.jpg') center/cover no-repeat;
+}
+
+.featured-content .container {
+  position: relative;
+  z-index: 2;
+}
+
+.featured-content .section-title {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.featured-content .glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+body.modoescuro .featured-content .glass-card {
+  background: rgba(30, 30, 30, 0.85);
+}
+
+.featured-content .glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.featured-content .card-text {
+  color: #4b5563;
+}
+
+body.modoescuro .featured-content .card-text {
+  color: #d1d5db;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+  .featured-content {
+    padding: 3rem 0;
+    background-attachment: scroll;
+  }
+
+  .featured-content .glass-card {
+    backdrop-filter: blur(5px);
+  }
+}
+
+/* Media Queries para ambas as seções */
+@media (max-width: 768px) {
+  .testimonials, .featured-content {
+    padding: 3rem 0;
+    background-attachment: scroll;
+  }
+
+  .testimonial-grid, .featured-content .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glass-card {
+    backdrop-filter: blur(5px);
   }
 }

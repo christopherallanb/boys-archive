@@ -3,9 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atividades</title>
+  <title>Atividades - boys-archive</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Script de persistência do tema -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('modoescuro');
+        document.querySelector('.navbar')?.classList.add('modoescuro');
+        document.querySelector('.hero')?.classList.add('modoescuro');
+        document.querySelector('.trilho')?.classList.add('modoescuro');
+      }
+    });
+  </script>
 </head>
 <body>
   <div class="min-h-screen">
@@ -13,26 +25,42 @@
     <nav class="navbar">
       <div class="container">
         <div class="logo">boys-archive</div>
-        <div class="nav-links">
+        <div class="menu-icon" id="menuIcon">☰</div>
+        <div class="nav-links" id="navLinks">
           <a href="index.html" class="nav-link">Início</a>
-          <a href="Atividades.html" class="nav-link">Atividades</a>
-          <a href="Sobre.html" class="nav-link">Sobre</a>
-          <a href="contato.html" class="nav-link">Contato</a> 
+          <a href="atividades.html" class="nav-link">Atividades</a>
+          
+          <!-- Dropdown de Perfil -->
+          <div class="profile-dropdown">
+            <button class="profile-button" id="profileButton">
+              <img src="img/about/icon/02.png" alt="Ícone de Perfil" class="profile-icon">
+              <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-menu" id="dropdownMenu">
+              <a href="sobre.html" class="dropdown-item">Sobre</a>
+              <a href="contato.html" class="dropdown-item">Contato</a>
+            </div>
+          </div>
+          
+          <!-- Toggle de Modo Escuro -->
+          <div class="trilho" id="trilho">
+            <div class="indicador"></div>
+          </div>
         </div>
       </div>
     </nav>
 
-    <!-- Atividades Section -->
+    <!-- Hero Section -->
     <section class="hero">
       <div class="container text-center">
         <h1 class="hero-title">Suas Atividades</h1>
         <p class="hero-subtitle">Veja abaixo as atividades disponíveis para você praticar e melhorar suas habilidades de inglês.</p>
-        <div class="hero-buttons">
-        </div>
       </div>
     </section>
-    
-        <!-- Lista de Atividades -->
+
+    <!-- Lista de Atividades -->
+    <section class="featured-content">
+      <div class="container">
         <div class="grid">
           <!-- Atividade 1 -->
           <div class="glass-card">
@@ -60,53 +88,48 @@
               <button class="btn-primary">Iniciar</button>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="grid">
-        <!-- Atividade 1 -->
-        <div class="glass-card">
-          <h3 class="card-title">Atividade 1: Pronúncia</h3>
-          <p class="card-text">Pratique a pronúncia das vogais em inglês com exercícios interativos.</p>
-          <div class="card-footer">
-            <button class="btn-primary">Iniciar</button>
+          <!-- Atividade 4 -->
+          <div class="glass-card">
+            <h3 class="card-title">Atividade 4: Compreensão</h3>
+            <p class="card-text">Exercícios de listening com diferentes sotaques e velocidades.</p>
+            <div class="card-footer">
+              <button class="btn-primary">Iniciar</button>
+            </div>
           </div>
-        </div>
 
-        <!-- Atividade 2 -->
-        <div class="glass-card">
-          <h3 class="card-title">Atividade 2: Gramática</h3>
-          <p class="card-text">Aprenda a usar os tempos verbais corretamente com exemplos práticos.</p>
-          <div class="card-footer">
-            <button class="btn-primary">Iniciar</button>
+          <!-- Atividade 5 -->
+          <div class="glass-card">
+            <h3 class="card-title">Atividade 5: Escrita</h3>
+            <p class="card-text">Pratique a escrita com correção automática de erros comuns.</p>
+            <div class="card-footer">
+              <button class="btn-primary">Iniciar</button>
+            </div>
           </div>
-        </div>
 
-        <!-- Atividade 3 -->
-        <div class="glass-card">
-          <h3 class="card-title">Atividade 3: Vocabulário</h3>
-          <p class="card-text">Amplie seu vocabulário com palavras e expressões do dia a dia.</p>
-          <div class="card-footer">
-            <button class="btn-primary">Iniciar</button>
+          <!-- Atividade 6 -->
+          <div class="glass-card">
+            <h3 class="card-title">Atividade 6: Conversação</h3>
+            <p class="card-text">Simulações de diálogos do cotidiano com reconhecimento de voz.</p>
+            <div class="card-footer">
+              <button class="btn-primary">Iniciar</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-      
-
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="container text-center">
-        <p class="footer-text">© 2023 Minha Plataforma. Alguns os direitos reservados.</p>
+        <p class="footer-text">© 2025 boys-archive. Todos os direitos reservados.</p>
       </div>
-    </footer> 
+    </footer>
 
     <!-- Scroll to Top Button -->
     <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">↑</button>
   </div>
 
-  <script src="js/Atividades.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

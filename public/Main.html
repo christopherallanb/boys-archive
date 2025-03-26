@@ -6,6 +6,19 @@
   <title>boys-archive</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Script de persistência do tema (adicionar no head) -->
+  <script>
+    // Carrega o tema salvo antes da renderização
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('modoescuro');
+        document.querySelector('.navbar')?.classList.add('modoescuro');
+        document.querySelector('.hero')?.classList.add('modoescuro');
+        document.querySelector('.trilho')?.classList.add('modoescuro');
+      }
+    });
+  </script>
 </head>
 <body>
   <div class="min-h-screen">
@@ -18,18 +31,19 @@
           <a href="#" class="nav-link">Início</a>
           <a href="Atividades.html" class="nav-link">Atividades</a>
           
-<!-- Botão de Perfil com Dropdown -->
-<div class="profile-dropdown">
-  <button class="profile-button" id="profileButton">
-    <img src="img/about/icon/02.png" alt="Ícone de Perfil" class="profile-icon">
-    <span class="dropdown-arrow">▼</span>
-  </button>
-  <div class="dropdown-menu" id="dropdownMenu">
-    <a href="sobre.html" class="dropdown-item">Sobre</a>
-    <a href="contato.html" class="dropdown-item">Contato</a>
-  </div>
-</div>
+          <!-- Botão de Perfil com Dropdown -->
+          <div class="profile-dropdown">
+            <button class="profile-button" id="profileButton">
+              <img src="img/about/icon/02.png" alt="Ícone de Perfil" class="profile-icon">
+              <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-menu" id="dropdownMenu">
+              <a href="sobre.html" class="dropdown-item">Sobre</a>
+              <a href="contato.html" class="dropdown-item">Contato</a>
+            </div>
+          </div>
           
+          <!-- Toggle de Tema -->
           <div class="trilho" id="trilho">
             <div class="indicador"></div>
           </div>
@@ -140,8 +154,8 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container text-center">
-        <p class="footer-text">© 2025 Minha Plataforma. Quase todos os direitos reservados.</p>
+      <div class="container">
+        <p class="footer-text">© 2025 boys-archive. Todos os direitos reservados.</p>
       </div>
     </footer>
 

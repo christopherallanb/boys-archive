@@ -5,7 +5,12 @@ body {
   padding: 0;
   background-color: #f9fafb;
   color: #1f2937;
-  transition: .5s;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body.modoescuro {
+  background-color: #1b1e23;
+  color: #f0f0f0;
 }
 
 .container {
@@ -27,6 +32,12 @@ body {
   align-items: center;
   width: 100%;
   z-index: 10;
+  transition: background-color 0.5s;
+}
+
+.navbar.modoescuro {
+  background-color: #1b1e23;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .container {
@@ -38,6 +49,7 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
+  color: inherit;
 }
 
 .nav-links {
@@ -49,61 +61,62 @@ body {
   color: #4b5563;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s;
 }
 
 .nav-link:hover {
   color: #3b82f6;
 }
 
-.trilho{
+body.modoescuro .nav-link {
+  color: #d1d5db;
+}
+
+body.modoescuro .nav-link:hover {
+  color: #60a5fa;
+}
+
+/* Toggle do Modo Escuro */
+.trilho {
   width: 4rem;
   height: 2rem;
   background-color: rgb(183, 182, 182);
   border-radius: 150px;
   position: relative;
   cursor: pointer;
-
+  transition: background-color 0.3s;
 }
-.trilho .indicador{
+
+.trilho .indicador {
   width: 30px;
   height: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
-  transform: scale(.8);
+  transform: scale(0.8);
   position: absolute;
   left: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .trilho.modoescuro {
   background-color: rgb(99, 99, 99);
 }
-body.modoescuro{
-background-color: #1b1e23;
-}
-.navbar.modoescuro  {
-  background-color: #1b1e23;
-  color: white;
-}
-.hero.modoescuro {
-  background: linear-gradient(to bottom, #1E2A38, #0D1117);
-}
 
-.trilho.modoescuro .indicador{
-  position: absolute;
+.trilho.modoescuro .indicador {
   left: 33px;
   background-color: black;
-
-  
-
 }
-
 
 /* Hero Section */
 .hero {
-  padding: 5rem 0;
+  padding: 7rem 0 5rem;
   background: linear-gradient(135deg, #72a8ff, #2563eb);
   color: #ffffff;
+  transition: background 0.5s;
+}
+
+.hero.modoescuro {
+  background: linear-gradient(to bottom, #1E2A38, #0D1117);
 }
 
 .hero-title {
@@ -126,10 +139,12 @@ background-color: #1b1e23;
 .btn-primary {
   background-color: #3b82f6;
   color: #ffffff;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   border: none;
   cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
@@ -143,12 +158,23 @@ background-color: #1b1e23;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Featured Content */
 .featured-content {
   padding: 4rem 0;
   background-color: rgba(229, 231, 235, 0.3);
+  transition: background-color 0.5s;
+}
+
+body.modoescuro .featured-content {
+  background-color: rgba(20, 20, 20, 0.3);
 }
 
 .section-title {
@@ -156,6 +182,7 @@ background-color: #1b1e23;
   font-weight: 700;
   margin-bottom: 2rem;
   text-align: center;
+  color: inherit;
 }
 
 .grid {
@@ -170,12 +197,23 @@ background-color: #1b1e23;
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.5s, color 0.5s;
+  color: #1f2937;
+}
+
+body.modoescuro .glass-card {
+  background: rgba(30, 30, 30, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  color: #f0f0f0;
 }
 
 .glass-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.modoescuro .glass-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .card-image {
@@ -188,10 +226,16 @@ background-color: #1b1e23;
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: inherit;
 }
 
 .card-text {
   color: #6b7280;
+  transition: color 0.5s;
+}
+
+body.modoescuro .card-text {
+  color: #a0a0a0;
 }
 
 .card-footer {
@@ -203,6 +247,11 @@ background-color: #1b1e23;
 .card-deadline {
   color: #6b7280;
   font-size: 0.875rem;
+  transition: color 0.5s;
+}
+
+body.modoescuro .card-deadline {
+  color: #a0a0a0;
 }
 
 /* Testimonials */
@@ -229,6 +278,11 @@ background-color: #1b1e23;
 .testimonial-text {
   color: #6b7280;
   margin-bottom: 1.5rem;
+  transition: color 0.5s;
+}
+
+body.modoescuro .testimonial-text {
+  color: #a0a0a0;
 }
 
 .testimonial-author {
@@ -241,21 +295,33 @@ background-color: #1b1e23;
   height: 50px;
   border-radius: 50%;
   margin-right: 1rem;
+  object-fit: cover;
 }
 
 .author-name {
   font-weight: 600;
+  color: inherit;
 }
 
 .author-info {
   color: #6b7280;
   font-size: 0.875rem;
+  transition: color 0.5s;
+}
+
+body.modoescuro .author-info {
+  color: #a0a0a0;
 }
 
 /* Call to Action */
 .cta {
   padding: 4rem 0;
   background-color: rgba(59, 130, 246, 0.05);
+  transition: background-color 0.5s;
+}
+
+body.modoescuro .cta {
+  background-color: rgba(59, 130, 246, 0.1);
 }
 
 .cta-buttons {
@@ -269,10 +335,21 @@ background-color: #1b1e23;
   background-color: #ffffff;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   padding: 2rem 0;
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+body.modoescuro .footer {
+  background-color: #1b1e23;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .footer-text {
   color: #6b7280;
+  transition: color 0.5s;
+}
+
+body.modoescuro .footer-text {
+  color: #a0a0a0;
 }
 
 /* Scroll to Top Button */
@@ -288,7 +365,11 @@ background-color: #1b1e23;
   cursor: pointer;
   opacity: 0;
   transform: translateY(2.5rem);
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, background-color 0.3s;
+}
+
+.scroll-top-btn:hover {
+  background-color: #2563eb;
 }
 
 .scroll-top-btn.visible {
@@ -296,21 +377,12 @@ background-color: #1b1e23;
   transform: translateY(0);
 }
 
-/* Estilos específicos para a página de atividades */
-.atividades {
-  padding: 5rem 0;
-  text-align: center;
+body.modoescuro .scroll-top-btn {
+  background-color: #60a5fa;
 }
 
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  color: #6b7280;
-  margin-bottom: 2rem;
+body.modoescuro .scroll-top-btn:hover {
+  background-color: #3b82f6;
 }
 
 /* Estilos para mobile */
@@ -325,6 +397,11 @@ background-color: #1b1e23;
     width: 100%;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  body.modoescuro .navbar .nav-links {
+    background-color: #1b1e23;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   .navbar .nav-links.active {
@@ -370,21 +447,5 @@ background-color: #1b1e23;
 @media (max-width: 768px) {
   .menu-icon {
     display: block !important;
-  }
-
-  .navbar .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #ffffff;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .navbar .nav-links.active {
-    display: flex;
   }
 }

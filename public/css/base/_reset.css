@@ -1,0 +1,66 @@
+/* base/_reset.css */
+/* =============== */
+/* GLOBAL BASE STYLES */
+/* =============== */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafb;
+    color: #1f2937;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  body.modoescuro {
+    background-color: #1b1e23;
+    color: #f0f0f0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Scroll to Top Button Base Styles */
+  .scroll-top-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.75rem;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(2.5rem);
+    transition: opacity 0.3s, transform 0.3s, background-color 0.3s;
+  }
+  
+  .scroll-top-btn:hover {
+    background-color: #2563eb;
+  }
+  
+  .scroll-top-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  body.modoescuro .scroll-top-btn {
+    background-color: #60a5fa;
+  }
+  
+  body.modoescuro .scroll-top-btn:hover {
+    background-color: #3b82f6;
+  }
+  
+  /* Utility Classes */
+  .min-h-screen {
+    min-height: 100vh;
+  }

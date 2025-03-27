@@ -1,0 +1,32 @@
+/* main.css */
+/* ======== */
+/* MAIN CSS ENTRY POINT */
+/* ======== */
+
+/* Base Styles */
+@import url('base/_reset.css');
+@import url('base/_variables.css');
+@import url('base/_utilities.css');
+
+/* Components */
+@import url('components/_navbar.css');
+@import url('components/_dropdown.css');
+@import url('components/_buttons.css');
+@import url('components/_cards.css');
+@import url('components/_toggle.css');
+@import url('components/_scroll-top.css');
+
+/* Sections */
+@import url('sections/_hero.css');
+@import url('sections/_featured.css');
+@import url('sections/_testimonials.css');
+@import url('sections/_cta.css');
+@import url('sections/_footer.css');
+
+/* Themes */
+@import url('themes/_dark-mode.css');
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  @import url('responsive/_mobile.css');
+}

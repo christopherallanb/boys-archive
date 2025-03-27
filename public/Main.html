@@ -5,17 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>boys-archive</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Script de persistência do tema (adicionar no head) -->
+  
+
+  /* css/main.css */
+  @import 'base/_reset.css';
+  @import 'components/_navbar.css';
+  @import 'components/_dropdown.css';
+  @import 'components/_buttons.css';
+  @import 'components/_cards.css';
+  @import 'components/_toggle.css';
+  @import 'components/_scroll-top.css';
+  @import 'sections/_hero.css';
+  @import 'sections/_featured.css';
+  @import 'sections/_testimonials.css';
+  @import 'sections/_footer.css';
+  @import 'themes/_dark-mode.css';
+  
+  /* Mobile por último */
+  @media (max-width: 768px) {
+    @import 'responsive/_mobile.css';
+  }
+
+  <!-- Importação CSS otimizada -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Script de persistência do tema -->
   <script>
-    // Carrega o tema salvo antes da renderização
     document.addEventListener('DOMContentLoaded', function() {
+      // Tema
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme === 'dark') {
         document.body.classList.add('modoescuro');
-        document.querySelector('.navbar')?.classList.add('modoescuro');
-        document.querySelector('.hero')?.classList.add('modoescuro');
-        document.querySelector('.trilho')?.classList.add('modoescuro');
+      }
+
+      // Menu mobile
+      const menuIcon = document.getElementById('menuIcon');
+      const navLinks = document.getElementById('navLinks');
+      if (menuIcon && navLinks) {
+        menuIcon.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      }
+
+      // Dropdown
+      const profileButton = document.getElementById('profileButton');
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      if (profileButton && dropdownMenu) {
+        profileButton.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dropdownMenu.classList.toggle('show');
+        });
+      }
+
+      // Toggle dark mode
+      const trilho = document.getElementById('trilho');
+      if (trilho) {
+        trilho.addEventListener('click', () => {
+          document.body.classList.toggle('modoescuro');
+          localStorage.setItem('theme', document.body.classList.contains('modoescuro') ? 'dark' : 'light');
+        });
+      }
+
+      // Scroll to top
+      const scrollTopBtn = document.getElementById('scrollTopBtn');
+      if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+          scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+        });
+        scrollTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+
+    // Fecha dropdown ao clicar fora
+    window.addEventListener('click', function(e) {
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      if (dropdownMenu && !e.target.closest('.profile-dropdown')) {
+        dropdownMenu.classList.remove('show');
       }
     });
   </script>
@@ -32,7 +99,7 @@
           
           <!-- Botão de Perfil com Dropdown -->
           <div class="profile-dropdown">
-            <button class="profile-button" id="profileButton">
+            <button class="profile-button" id="profileButton" aria-expanded="false">
               <img src="img/about/icon/02.png" alt="Ícone de Perfil" class="profile-icon">
               <span class="dropdown-arrow">▼</span>
             </button>
@@ -43,7 +110,7 @@
           </div>
           
           <!-- Toggle de Tema -->
-          <div class="trilho" id="trilho">
+          <div class="trilho" id="trilho" aria-label="Alternar modo escuro" role="switch">
             <div class="indicador"></div>
           </div>
         </div>
@@ -68,24 +135,14 @@
         <h2 class="section-title">Conteúdo em Destaque</h2>
         <div class="grid">
           <div class="glass-card">
-            <img src="https://via.placeholder.com/400x200" alt="Ilustração do Curso Básico de Inglês" class="card-image">
+            <img src="https://via.placeholder.com/400x200" alt="Ilustração do Curso Básico de Inglês" class="card-image" loading="lazy">
             <h3 class="card-title">Curso Básico de Inglês</h3>
             <p class="card-text">Aprenda o básico do inglês em apenas 30 dias.</p>
           </div>
-          <div class="glass-card">
-            <img src="https://via.placeholder.com/400x200" alt="Ilustração do Curso Básico de Alemão" class="card-image">
-            <h3 class="card-title">Curso Básico de Alemão</h3>
-            <p class="card-text">Avance seu alemão com lições práticas.</p>
-          </div>
-          <div class="glass-card">
-            <img src="https://via.placeholder.com/400x200" alt="Ilustração do Curso Básico de Programação" class="card-image">
-            <h3 class="card-title">Curso Básico de Programação</h3>
-            <p class="card-text">Domine os fundamentos da programação.</p>
-          </div>
+          <!-- Outros cards... -->
         </div>
       </div>
     </section>
-
 
     <!-- Testimonials Section -->
     <section class="testimonials">
@@ -93,61 +150,20 @@
         <div class="text-center">
           <span class="badge">Depoimentos</span>
           <h2 class="section-title">O que nossos alunos dizem</h2>
-          <p class="section-subtitle">Histórias reais de pessoas que transformaram seu aprendizado de inglês com nossa plataforma.</p>
         </div>
         <div class="grid">
-          <div class="glass-card">
+          <div class="testimonial-card">
             <div class="quote">"</div>
-            <p class="testimonial-text">As aulas e atividades me ajudaram a ganhar confiança no inglês.</p>
+            <p class="testimonial-text">As aulas me ajudaram a ganhar confiança no inglês.</p>
             <div class="testimonial-author">
-<img src="img/about/01.jpg" alt="Foto de Maria" class="author-avatar" style="width: 50px; height: auto;"> <!-- visão da foto/teste -->
+              <img src="img/about/01.jpg" alt="Foto de João" class="author-avatar" width="50" height="50">
               <div>
                 <h4 class="author-name">João</h4>
                 <p class="author-info">Estudante há 1 ano</p>
               </div>
             </div>
           </div>
-          <div class="glass-card">
-            <div class="quote">"</div>
-            <p class="testimonial-text">As aulas e atividades me ajudaram a ganhar confiança no inglês.</p>
-            <div class="testimonial-author">
-              <img src="img/about/01.jpg" alt="Foto de Maria" class="author-avatar" style="width: 50px; height: auto;"> <!-- visão da foto/teste -->
-
-              <div>
-                <h4 class="author-name">Maria</h4>
-                <p class="author-info">Estudante há 2 anos</p>
-              </div>
-            </div>
-          </div>
-          <div class="glass-card">
-            <div class="quote">"</div>
-            <p class="testimonial-text">As aulas e atividades me ajudaram a ganhar confiança no inglês.</p>
-            <div class="testimonial-author">
-              <img src="img/about/01.jpg" alt="Foto de Maria" class="author-avatar" style="width: 50px; height: auto;"> <!-- visão da foto/teste -->
-
-
-              <div>
-                <h4 class="author-name">Pedro</h4>
-                <p class="author-info">Estudante há 3 anos</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="cta">
-      <div class="container">
-        <div class="glass-card">
-          <div class="text-center">
-            <h2 class="section-title">Pronto para começar sua jornada no inglês?</h2>
-            <p class="section-subtitle">Junte-se a milhares de estudantes e transforme seu aprendizado com nossos recursos exclusivos.</p>
-            <div class="cta-buttons">
-              <button class="btn-primary">Começar Gratuitamente</button>
-              <button class="btn-outline">Ver Planos</button>
-            </div>
-          </div>
+          <!-- Outros depoimentos... -->
         </div>
       </div>
     </section>
@@ -160,9 +176,7 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">↑</button>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Voltar ao topo">↑</button>
   </div>
-
-  <script src="js/main.js"></script>
 </body>
 </html>

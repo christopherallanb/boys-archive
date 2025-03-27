@@ -1,0 +1,87 @@
+/* sections/_hero.css */
+/* ============== */
+/* HERO SECTION */
+/* ============== */
+
+.hero {
+    padding: 7rem 0 5rem;
+    background: url('../img/banner/10.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    transition: background 0.5s;
+  }
+  
+  .hero.modoescuro {
+    background: linear-gradient(to bottom, #1E2A38, #0D1117);
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .btn-primary {
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2563eb;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 5rem 0 3rem;
+    }
+    
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .btn-primary,
+    .btn-outline {
+      width: 100%;
+    }
+  }

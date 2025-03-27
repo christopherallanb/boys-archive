@@ -1,0 +1,19 @@
+:root {
+  /* Cores */
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --text-light: #1f2937;
+  --text-dark: #f0f0f0;
+  --bg-light: #f9fafb;
+  --bg-dark: #1b1e23;
+  --gray-light: #e5e7eb;
+  --gray-dark: #4b5563;
+
+  /* Cards */
+  --card-bg-light: rgba(255, 255, 255, 0.95);
+  --card-bg-dark: rgba(39, 39, 42, 0.95);
+
+  /* Transições */
+  --transition: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+}

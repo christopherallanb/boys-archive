@@ -1,0 +1,149 @@
+/* themes/_dark-mode.css */
+/* ==================== */
+/* OVERRIDES DO MODO ESCURO */
+/* ==================== */
+
+/* Body */
+body.modoescuro {
+    background-color: #1b1e23;
+    color: #f0f0f0;
+  }
+  
+  /* Navbar */
+  .navbar.modoescuro {
+    background-color: #1b1e23;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Links da Navbar */
+  body.modoescuro .nav-link {
+    color: #d1d5db;
+  }
+  
+  body.modoescuro .nav-link:hover {
+    color: #60a5fa;
+  }
+  
+  /* Dropdown Menu */
+  body.modoescuro .dropdown-menu {
+    background-color: #2d3748;
+    border-color: #4a5568;
+  }
+  
+  body.modoescuro .dropdown-item {
+    color: #e2e8f0;
+  }
+  
+  body.modoescuro .dropdown-item:hover {
+    background-color: #4a5568;
+  }
+  
+  body.modoescuro .dropdown-item::after {
+    background: linear-gradient(90deg, transparent, #4a5568, transparent);
+  }
+  
+  /* Toggle Switch */
+  .trilho.modoescuro {
+    background-color: rgb(99, 99, 99);
+  }
+  
+  .trilho.modoescuro .indicador {
+    left: 33px;
+    background-color: black;
+  }
+  
+  /* Hero Section */
+  .hero.modoescuro {
+    background: linear-gradient(to bottom, #1E2A38, #0D1117);
+  }
+  
+  /* Featured Content */
+  body.modoescuro .featured-content {
+    background: linear-gradient(rgba(27, 30, 35, 0.9), rgba(27, 30, 35, 0.95));
+  }
+  
+  body.modoescuro .section-title {
+    color: #f3f4f6;
+  }
+  
+  body.modoescuro .section-title::after {
+    background: #60a5fa;
+  }
+  
+  /* Glass Cards */
+  body.modoescuro .glass-card {
+    background: rgba(39, 39, 42, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.05);
+    color: #f9fafb;
+  }
+  
+  body.modoescuro .glass-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  body.modoescuro .card-text {
+    color: #d1d5db;
+  }
+  
+  body.modoescuro .card-footer {
+    border-top-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  body.modoescuro .card-deadline {
+    color: #9ca3af;
+  }
+  
+  /* Testimonials */
+  body.modoescuro .testimonials {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), 
+                url('../img/banner/11.jpg') center/cover no-repeat fixed;
+  }
+  
+  body.modoescuro .testimonial-card {
+    background: rgba(30, 30, 30, 0.4);
+  }
+  
+  /* Featured Content com background */
+  body.modoescuro .featured-content {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                url('../img/banner/02.jpg') center/cover no-repeat;
+  }
+  
+  body.modoescuro .featured-content .glass-card {
+    background: rgba(30, 30, 30, 0.85);
+  }
+  
+  body.modoescuro .featured-content .card-text {
+    color: #d1d5db;
+  }
+  
+  /* Call to Action */
+  body.modoescuro .cta {
+    background-color: rgba(59, 130, 246, 0.1);
+  }
+  
+  /* Footer */
+  body.modoescuro .footer {
+    background-color: #1b1e23;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  body.modoescuro .footer-text {
+    color: #a0a0a0;
+  }
+  
+  /* Scroll to Top */
+  body.modoescuro .scroll-top-btn {
+    background-color: #60a5fa;
+  }
+  
+  body.modoescuro .scroll-top-btn:hover {
+    background-color: #3b82f6;
+  }
+  
+  /* Navbar Mobile */
+  body.modoescuro .navbar .nav-links {
+    background-color: #1b1e23;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
